@@ -2,7 +2,7 @@
 This project contains simple templates for how to use Aragorn's embeddable widget which can be inserted into a host website. It supports JSX, CSS styles, and is compiled using [ParcelJS](https://parceljs.org/) into a single .js and .css file.
 
 ## Prerequisite
-Before you use the embeddable Aragorn widget in your application. Make sure to configure your mapping template on the [Aragorn platform](https://app.aragorn.ai/). View Aragorn's documentation in our Help center to follow how to get this setup
+Before you use the embeddable Aragorn widget in your application. Make sure to configure your mapping template on the Aragorn platform. View Aragorn's documentation in our Help center to follow how to get this setup
 
 ## Overview
 1. The widget is made available by loading in the .js and .css package
