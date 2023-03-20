@@ -37,11 +37,11 @@ Second, configure the element in which the embeddable Aragorn widget will be ins
 
 ```html
     <div class="aragorn-embeddable" 
-    data-token="<INSERT_THE_TOKEN_RETURNED_FROM_PARTNER_API_CALL>"
-    data-width="<HOW_WIDE_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: 60vw)>"
-    data-height="<HOW_LONG_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: 60vh)>"
-    data-primary-color="<YOUR_THEME_COLOR_FOR_PRIMARY_BUTTONS_(ex:#434ce8)>"
-    data-secondary-color="<YOUR_THEME_COLOR_FOR_SECONDARY_BUTTONS_(ex:#d2d4f9)>">
+    data-token=<INSERT_THE_TOKEN_RETURNED_FROM_PARTNER_API_CALL>
+    data-width=<HOW_WIDE_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: "60vw")>
+    data-height=<HOW_LONG_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: "60vh")>
+    data-primary-color=<YOUR_THEME_COLOR_FOR_PRIMARY_BUTTONS_(ex: "#434ce8")>
+    data-secondary-color=<YOUR_THEME_COLOR_FOR_SECONDARY_BUTTONS_(ex: "#d2d4f9")>
     </div>
 ```
 
@@ -77,11 +77,11 @@ Second, in whatever component that is responsible for showing the widget, config
 
 ```html
     <div class="aragorn-embeddable" 
-    data-token="<INSERT_THE_TOKEN_RETURNED_FROM_PARTNER_API_CALL>"
-    data-width="<HOW_WIDE_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: 60vw)>"
-    data-height="<HOW_LONG_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: 60vh)>"
-    data-primary-color="<YOUR_THEME_COLOR_FOR_PRIMARY_BUTTONS_(ex:#434ce8)>"
-    data-secondary-color="<YOUR_THEME_COLOR_FOR_SECONDARY_BUTTONS_(ex:#d2d4f9)>">
+    data-token=<INSERT_THE_TOKEN_RETURNED_FROM_PARTNER_API_CALL>
+    data-width=<HOW_WIDE_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: "60vw")>
+    data-height=<HOW_LONG_OF_SPACE_THE_WIDGET_SHOULD_TAKE_(ex: "60vh")>
+    data-primary-color=<YOUR_THEME_COLOR_FOR_PRIMARY_BUTTONS_(ex: "#434ce8")>
+    data-secondary-color=<YOUR_THEME_COLOR_FOR_SECONDARY_BUTTONS_(ex: "#d2d4f9")>
     </div>
 ```
 
