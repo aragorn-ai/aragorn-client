@@ -23,11 +23,9 @@
 
     <script>
         function injectToken(){
-if(event.key === 'Enter'){
     const token = document.getElementById('token_from_partner_api_http_call').value;
     const widget = document.getElementById('aragorn_embedable_1');
     widget.setAttribute('data-token',document.getElementById('token_from_partner_api_http_call').value);
-}
 }
     </script>
 </head>
@@ -44,8 +42,11 @@ if(event.key === 'Enter'){
         <div class="responsive-wrapper">
             <div class="main-header">
                 <h1>Home</h1>
-                <div class="search">
-                    <input id="token_from_partner_api_http_call" type="text" placeholder="Enter token returned from partner api call and press enter" onkeydown="injectToken()" />
+                <div class="search-wrapper">
+                    <div class="search">
+                        <input id="token_from_partner_api_http_call" type="text" placeholder="Enter token returned from partner api call" />
+                    </div>
+                    <button onclick="injectToken()" type="button" class="colored-button">Authenticate</button>
                 </div>
             </div>
             <div class="horizontal-tabs">

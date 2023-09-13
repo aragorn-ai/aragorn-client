@@ -103,6 +103,23 @@
  .header-navigation-actions > .button + .icon-button {
 	 margin-left: 1rem;
 }
+.colored-button {
+	font: inherit;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1em;
+	height: 40px;
+	border-radius: 8px;
+	line-height: 1;
+	font-size: 0.875rem;
+	transition: 0.15s ease;
+	background-color: var(--c-accent-primary);
+}
  .button {
 	 font: inherit;
 	 color: inherit;
@@ -179,12 +196,17 @@
 		 margin-bottom: 1rem;
 	}
 }
+.search-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
  .search {
 	 position: relative;
 	 display: flex;
 	 align-items: center;
-	 width: 100%;
-	 max-width: 400px;
+	 width: 450px;
 }
  .search input {
 	 font: inherit;
