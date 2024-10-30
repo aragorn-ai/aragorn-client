@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link href="dashboard.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,62 +9,89 @@
     <title>Aragorn Embedabble Example</title>
 
     <!-- Within this comment is the css and js you need to enable the embeddable code. -->
-    
+
     <!-- Use the below when in sandbox envrionment -->
-    <link href="https://static.aragorn.ai/embeddable/dev/index.css" rel="stylesheet" /> 
-    <script src="https://static.aragorn.ai/embeddable/dev/index.js" defer></script>
-    
+    <link
+      href="https://static.aragorn.ai/embeddable/dev/index.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://static.aragorn.ai/embeddable/dev/index.js"
+      defer
+    ></script>
+
     <!-- Use the below when in production environment-->
     <!-- <link href="https://static.aragorn.ai/embeddable/prod/index.css" rel="stylesheet" />
     <script src="https://static.aragorn.ai/embeddable/prod/index.js"></script> -->
-    
+
     <!--------------------------------------------------------------------------------------->
 
     <script>
-        function injectToken(){
-    const token = document.getElementById('token_from_partner_api_http_call').value;
-    const widget = document.getElementById('aragorn_embedable_1');
-    widget.setAttribute('data-token',document.getElementById('token_from_partner_api_http_call').value);
-}
+      function injectToken() {
+        const token = document.getElementById(
+          "token_from_partner_api_http_call"
+        ).value;
+        const widget = document.getElementById("aragorn_embedable_1");
+        window.AragornEmbedder.updateWidget({
+          widgetToken: document.getElementById(
+            "token_from_partner_api_http_call"
+          ).value,
+          widgetHeight: "90vh",
+          primaryColor: "#111827",
+        });
+      }
     </script>
-</head>
+  </head>
 
-<body onload="window.AragornEmbedder.initialize()">
+  <body
+    onload="window.AragornEmbedder.initialize({
+    widgetToken:'',
+    widgetHeight:'90vh',
+    primaryColor:'#111827'
+})"
+  >
     <header class="header">
-        <div class="header-content responsive-wrapper">
-            <h2 class="header-logo">
-                Some Corporation
-            </h2>
-        </div>
+      <div class="header-content responsive-wrapper">
+        <h2 class="header-logo">Some Corporation</h2>
+      </div>
     </header>
     <main class="main">
-        <div class="responsive-wrapper">
-            <div class="main-header">
-                <h1>Home</h1>
-                <div class="search-wrapper">
-                    <div class="search">
-                        <input id="token_from_partner_api_http_call" type="text" placeholder="Enter token returned from partner api call" />
-                    </div>
-                    <button onclick="injectToken()" type="button" class="colored-button">Authenticate</button>
-                </div>
+      <div class="responsive-wrapper">
+        <div class="main-header">
+          <h1>Home</h1>
+          <div class="search-wrapper">
+            <div class="search">
+              <input
+                id="token_from_partner_api_http_call"
+                type="text"
+                placeholder="Enter token returned from partner api call"
+              />
             </div>
-            <div class="horizontal-tabs">
-                <a href="#" class="active">Integrations</a>
-            </div>
-            <div class="content-header">
-                <div class="content-header-intro">
-                    <h2>HRIS system connections and mappings</h2>
-                    <p>Connect to your HRIS to provide the required data</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <!-- Within this comment is the html code you will insert at the location you want the embeddable to show-->
-                <div id="aragorn_embedable_1" class="aragorn-embeddable" data-token="" data-width="60vw" data-height="60vh" data-primary-color="#434ce8" data-secondary-color="#d2d4f9"></div>
-                <!---------------------------------------------------------------------------------------------------------->
-            </div>
-					
+            <button
+              onclick="injectToken()"
+              type="button"
+              class="colored-button"
+            >
+              Authenticate
+            </button>
+          </div>
         </div>
+        <div class="horizontal-tabs">
+          <a href="#" class="active">Integrations</a>
+        </div>
+        <div class="content-header">
+          <div class="content-header-intro">
+            <h2>HRIS system connections and mappings</h2>
+            <p>Connect to your HRIS to provide the required data</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <!-- Within this comment is the html code you will insert at the location you want the embeddable to show-->
+          <div id="aragorn-embeddable"></div>
+          <!---------------------------------------------------------------------------------------------------------->
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
